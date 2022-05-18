@@ -26,9 +26,9 @@ label rpgMod_intro:
     menu:
       "Yes!":
         m "Really? Where did you get the chance to roleplay?"
-            $ _history_list.pop("Really? Where did you get the chance to roleplay?")
-            menu:
-              "On a tabletop RPG session."
+        $ _history_list.pop("Really? Where did you get the chance to roleplay?")
+        menu:
+            "On a tabletop RPG session."
                 m "Great! That's the kind of roleplay that has been intriguing me lately, to be honest."
                 m "The one where you have to improvise according to the situations given to you!"
                 m "Tabletop RPGs can vary a lot: in session duration, in rules, in difficulty."
@@ -42,11 +42,11 @@ label rpgMod_intro:
                 m "Watch the plot thicken and the storyline get even more detailed..."
                 m "Unfortunately, I can't roleplay the regular way right now."
                 m "But we could try together, what do you think, [player]?"
-              m "I could study a bit to try to be a Dungeon Master of some sort."
-              m "I would love to watch what you would do to face the hardships I would put in your way!"
-              extend "Ehehehe~"
+                m "I could study a bit to try to be a Dungeon Master of some sort."
+                m "I would love to watch what you would do to face the hardships I would put in your way!"
+                extend "Ehehehe~"
     
-            "On a videogame."
+          "On a videogame."
               m "Oh! I see!"
               m "Videogames always makes our blood boil, doesn't it?"
               m "RPG games really make us get immersed in the storyline."
@@ -77,7 +77,7 @@ label rpgMod_intro:
               m "I would love to watch what you would do to face the hardships I would put in your way!"
               extend "Ehehehe~"
       
-            "In an acting situation."
+          "In an acting situation."
               m "Oh wow, [player]!"
               m "You never told me I was dating an actor!"
               extend "Ahahaha~"
@@ -139,4 +139,3 @@ label rpgMod_intro:
       m "I could study a bit to try to be a Dungeon Master of some sort."
       m "I would love to watch what you would do to face the hardships I would put in your way!"
       extend "Ehehehe~"
-    
