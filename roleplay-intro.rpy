@@ -4,7 +4,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="rpgMod_intro",
             prompt="About RPGs",
-            category=["Roleplaying"],
+            category=["roleplaying"],
             random=True
         )
     )
@@ -16,7 +16,7 @@ label rpgmod_intro:
     extend "It's surprisingly prevalent in different types of media! It's in theatre, movies, literature, the list goes on."
     m "There's even a whole genre of games dedicated to roleplay!" 
     extend "It's called 'RPG', it's short for 'role-playing game.'"
-    m "And even {i}that{/i} has a wide variety of types in itself, such as table top styles"
+    m "And even {i}that{/i} has a wide variety of types in itself, such as table-top styles"
     extend "- like Dungeons and Dragons -,"
     extend "or video games like MMORPGs and JRPGs!" 
     m "Even visual novels like this one can count as an RPG, depending on how indepth it goes in player choice and immersion!"
@@ -25,16 +25,16 @@ label rpgmod_intro:
     menu:
       m "So, [player], have you ever roleplayed in some way?{fast}"
       "Yes!":
+        #player_has_roleplayed = true:
         m "Oh? What kind of roleplay have you done?{nw}"
         $ _history_list.pop()
         menu:
             m "Oh? What kind of roleplay have you done?{fast}"
 
             "A tabletop RPG session."
-                #havent done writing touch ups here yet
-                m "Great! That's the kind of roleplay that has been intriguing me lately, to be honest."
-                m "The one where you have to improvise according to the situations given to you!"
-                m "Tabletop RPGs can vary a lot: in session duration, in rules, in difficulty."
+                m "Really? That's great!"
+                m "Tabletop RPGs are incredibly interesting, aren't they?"
+                extend "They can vary a lot: in session duration, in rules, in difficulty."
                 m "But if they have one thing in common, it's that they are super fun."
                 m "If you find the right people to play with you!"
                 m "So much is up to chance, but if you find the right people, the story can become so intricate and interesting!"
@@ -43,12 +43,11 @@ label rpgmod_intro:
                 m "Introduce my character to my party..."
                 extend "Battle a tough boss together..."
                 m "Watch the plot thicken and the storyline get even more detailed..."
-                m "Unfortunately, I can't roleplay the regular way right now."
-                m "But we could try together, what do you think, [player]?"
                 m "I could study a bit to try to be a Dungeon Master of some sort."
-                m "I would love to watch what you would do to face the hardships I would put in your way!"
+                m "And I would love to watch what you would do to face the hardships I would put in your way!"
                 extend "Ehehehe~"
     
+
           "While Videogaming."
               m "Oh! I see!"
               m "Videogames always makes the gears in our brain turn, doesn't it?"
@@ -61,42 +60,11 @@ label rpgmod_intro:
               m " not yet anyways."
               m "Especially if I were to make it choice based, because then you have to keep track of multiple routes and how they effect events around each other."
               m "It can get overwhelming fast!"
-              m "So maybe I'll still to my poems for now, ahaha!"
+              m "So maybe I'll stick to my poems for now, ahaha!"
               #pseudo code: if aff is love and higher:
                             #m "But maybe one day I'll get better at manipulating my reality's script, and I can write us up a little date~!"
                             #extend " Wouldn't that be nice~?"
                             #extend " Ehehe~!"
-
-              jump rpgmod_yeschoice_alt
-
-                #wanna use this part somewhere cuz i dont wanna waste perfectly good dialogue, just need to figure out where to blend it in nicely
-
-              m "But the kind of roleplay that has been intriguing me lately is another one, to be honest."
-              m "It's the one where you have to improvise according to the situations given to you!"
-              m "This kind of roleplaying is seen a lot in tabletop RPGs such as Dungeons and Dragons,"
-              extend "DnD, for short!"
-              m "The intent of DnD sessions is allowing each player to create their own character to play instead of a military formation."
-              m "These characters embark upon imaginary adventures within a fantasy setting!"
-              m "In the table, there's a Dungeon Master, who serves as the game's referee and storyteller, while maintaining the setting in which the adventures occur."
-              m "They also play the role of the inhabitants of the game world!"
-              m "So we can say the Dungeon Master is the narrator, the rulemaker and the NPCs!"
-              m "The characters form a party and interact with the setting's inhabitants and also each other."
-              m "Together, they solve dilemmas, engage in battles, explore, and gather treasure and knowledge."
-              m "In this process, the characters earn experience points - XP - in order to rise in levels, and become increasingly powerful over a series of separate gaming sessions."
-              m "Tabletop RPGs can vary a lot: in session duration, in rules, in difficulty."
-              m "But if they have one thing in common, it's that they are super fun."
-              m "If you find the right people to play with you!"
-              m "So much is up to chance, but if you find the right people, the story can become so intricate and interesting!"
-              m "I think this way of writing is fascinating!"
-              m "...I would love to participate in a RPG session myself."
-              m "Introduce my character to my party..."
-              extend "Battle a tough boss together..."
-              m "Watch the plot thicken and the storyline get even more detailed..."
-              m "Unfortunately, I can't roleplay the regular way right now."
-              m "But we could try together, what do you think, [player]?"
-              m "I could study a bit to try to be a Dungeon Master of some sort."
-              m "I would love to watch what you would do to face the hardships I would put in your way!"
-              extend "Ehehehe~"
       
           "In an acting situation."
               m "Oh wow, [player]!"
@@ -115,70 +83,21 @@ label rpgmod_intro:
                             #m "One of these days you should show me some of the things you worked in, if you can!"
                             #extend " Maybe I've already seen you in something big before~? 
                             #extend " Ehehe~!"
-
-              jump rpgmod_yeschoice_alt
-               #this entire chunk of dialogue is wip, i want to reincorperate it elsewhere but im not sure where yet
-              m "The kind of roleplay that has been intriguing me lately is another one, to be honest."
-              m "It's the one where you have to improvise according to the situations given to you!"
-              m "This kind of roleplaying is seen a lot in tabletop RPGs such as Dungeons and Dragons,"
-              extend "DnD, for short!"
-              m "The intent of DnD sessions is allowing each player to create their own character to play instead of a military formation."
-              m "These characters embark upon imaginary adventures within a fantasy setting!"
-              m "In the table, there's a Dungeon Master, who serves as the game's referee and storyteller, while maintaining the setting in which the adventures occur."
-              m "They also play the role of the inhabitants of the game world!"
-              m "So we can say the Dungeon Master is the narrator, the rulemaker and the NPCs!"
-              m "The characters form a party and interact with the setting's inhabitants and also each other."
-              m "Together, they solve dilemmas, engage in battles, explore, and gather treasure and knowledge."
-              m "In this process, the characters earn experience points - XP - in order to rise in levels, and become increasingly powerful over a series of separate gaming sessions."
-              m "Tabletop RPGs can vary a lot: in session duration, in rules, in difficulty."
-              m "But if they have one thing in common, it's that they are super fun."
-              m "If you find the right people to play with you!"
-              m "So much is up to chance, but if you find the right people, the story can become so intricate and interesting!"
-              m "I think this way of writing is fascinating!"
-              m "...I would love to participate in a RPG session myself."
-              m "Introduce my character to my party..."
-              extend "Battle a tough boss together..."
-              m "Watch the plot thicken and the storyline get even more detailed..."
-              m "Unfortunately, I can't roleplay the regular way right now."
-              m "But we could try together, what do you think, [player]?"
-              m "I could study a bit to try to be a Dungeon Master of some sort."
-              m "I would love to watch what you would do to face the hardships I would put in your way!"
-              extend "Ehehehe~"
-              
     "No...":
-    #no writing touch up done here yet 
+      #player_has_roleplayed = false:
       m "Aww, [player], that's okay!"
-      m "There will still be plenty of opportunities for you to exmperiment it."
-      m "The kind of roleplay that has been intriguing me lately is a specific one."
-      m "It's the one where you have to improvise according to the situations given to you!"
-      m "This kind of roleplaying is seen a lot in tabletop RPGs such as Dungeons and Dragons,"
-      extend "DnD, for short!"
-      m "The intent of DnD sessions is allowing each player to create their own character to play instead of a military formation."
-      m "These characters embark upon imaginary adventures within a fantasy setting!"
-      m "In the table, there's a Dungeon Master, who serves as the game's referee and storyteller, while maintaining the setting in which the adventures occur."
-      m "They also play the role of the inhabitants of the game world!"
-      m "So we can say the Dungeon Master is the narrator, the rulemaker and the NPCs!"
-      m "The characters form a party and interact with the setting's inhabitants and also each other."
-      m "Together, they solve dilemmas, engage in battles, explore, and gather treasure and knowledge."
-      m "In this process, the characters earn experience points - XP - in order to rise in levels, and become increasingly powerful over a series of separate gaming sessions."
-      m "Tabletop RPGs can vary a lot: in session duration, in rules, in difficulty."
-      m "But if they have one thing in common, it's that they are super fun."
-      m "If you find the right people to play with you!"
-      m "So much is up to chance, but if you find the right people, the story can become so intricate and interesting!"
-      m "I think this way of writing is fascinating!"
-      m "...I would love to participate in a RPG session myself."
-      m "Introduce my character to my party..."
-      extend "Battle a tough boss together..."
-      m "Watch the plot thicken and the storyline get even more detailed..."
-      m "Unfortunately, I can't roleplay the regular way right now."
-      m "But we could try together, what do you think, [player]?"
-      m "I could study a bit to try to be a Dungeon Master of some sort."
-      m "I would love to watch what you would do to face the hardships I would put in your way!"
-      extend "Ehehehe~"
+      m "I'm in the same boat, "
+      extend "I haven't been able to roleplay either..."
+      m "Though from what I can tell, it's really easy to get into if you ever want to try it!"
+      m "There's tons of categories that let you roleplay! "
+      extend " there's table-top, 
+      extend " videogames, 
+      extend " all sorts of acting scenarios, 
+      extend " and many many more~!"
+      m "As long as you find yourself trying to play a role in anything, that can be considered roleplay~!"
+      m "So really, maybe you and I {i}have{/i} done it before, but just never realized!" 
 
-label rpgmod_yeschoice_alt:
-
-    m "Anyways,"
+    m "But anyways,"
     m "I brought up the topic on roleplay because I've been really interested in Dungeons and Dragons-- a tabletop RPG also known as DND!"
     m "Lately I've found myself listening to podcasts of people doing DND sessions together,"
     m " it's been really fun! Everyone tries their best to play into their role seriously!
@@ -209,7 +128,7 @@ label rpgmod_yeschoice_alt:
     extend " not that I don't mind your company of course-- 
     extend " I just don't have the coding skill yet to make all the aspects to play a session..."
     m "..."
-    m "Wait,{nw}
+    m "Wait,{nw}"
     extend " we don't {i}need{/i} all the aspects to at least play something {i}similar{/i} to DND, right?"
     m "I mean this is a visual novel engine all, so we could make use of choice menus and other aspects!"
     m "Hmmm, yeah, I can imagine it now... 
@@ -227,7 +146,7 @@ label rpgmod_yeschoice_alt:
         m "I hope you know you can always ramble to me about your interests too, I love to hear about things you like~!"
 
 #insert jump to a short cliché story, maybe required tutorial story? Idk yet. I'm not good at writing original stories A-
-
+#after: jump dndmod_introend:
 
       "Maybe another time, [m_name].":
         m "Oh, alright [player]."
@@ -238,11 +157,9 @@ label rpgmod_yeschoice_alt:
         m "And I hope you know you can always ramble to me about your interests too, I love to hear about things you like~!"
         m "I love you, [mas_get_player_nickname()]."
         
-        jump rpgmod_introend
+        jump dndmod_introend
 
-label rpgmod_altdialogue:
-#wip
 
-label rpgmod_introend:
+label dndmod_introend:
 
 return "love|derandom"
