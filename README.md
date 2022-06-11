@@ -23,7 +23,7 @@
   * ![reddit](.github/icons/reddit.svg) [u/my-otter-self](https://reddit.com/u/my-otter-self)
   ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@my-otter-self](https://github.com/my-otter-self)
   — repo maintainer, writer, general help
-  * ![reddit](.github/icons/reddit.svg) [u/History_Variety63](https://reddit.com/u/History_Variety63)
+  * ![reddit](.github/icons/reddit.svg) [u/Historical_Variety63](https://reddit.com/u/Historical_Variety63)
   — writing/ideas help, and art design concept help
 
 ## 🪐 ⭑ Join our Discord
