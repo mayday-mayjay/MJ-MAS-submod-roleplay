@@ -2,9 +2,6 @@
 <h3 align="center">"Hello there, my dear player! Are you ready to go on an adventure with me~?" ~ Monika</h3>
 <p align="center">Welcome to the RP with Monika Submod! Come join your Monika as she discovers a passion for writing up stories and roleplays for you two to play together, using different kinds of genres and playstyles!</p>
 <p align="center">
-  <a href="https://github.com/my-otter-self/otters-MAS-smol-submods/releases/latest">
-    <img alt="Latest release" src="https://img.shields.io/github/v/release/my-otter-self/otters-MAS-submods">
-  </a>
   <a href="https://discord.gg/Tx23rczN8N">
     <img alt="Discord server" src="https://discordapp.com/api/guilds/957814201311694870/widget.png?style=shield">
   </a>
