@@ -18,7 +18,7 @@
 
 ## 🌙 ⭑ Credits
 
-  * ![discord](.github/icons/discord.svg) DJChicken#2001 / The DreamScape system
+  * ![discord](.github/icons/discord.svg) DJMayJay#2001 / The DreamScape system
   — team leader and main concept creator
   * ![reddit](.github/icons/reddit.svg) [u/my-otter-self](https://reddit.com/u/my-otter-self)
   ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@my-otter-self](https://github.com/my-otter-self)
