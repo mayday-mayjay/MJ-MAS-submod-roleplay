@@ -14,7 +14,7 @@ init 5 python:
     )
 
 label MJroleplay_start:
-  m "Really, [player]?"
-  extend "Yay! Let's do this!"
-  m ""
-  return
+    m "Really, [player]?"
+    extend "Yay! Let's do this!"
+    m ""
+    return
