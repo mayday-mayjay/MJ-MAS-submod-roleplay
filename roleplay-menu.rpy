@@ -344,3 +344,70 @@ init 10 python in mas_ui:
                 _DJ_TWOPANE_MENU_DELEGATES_CALLBACK_MAP[prefix]()
                 return
         return
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="rpgMod_menu",
+            prompt="I want to come back to some story...",
+            category=["roleplaying"],
+            pool=True,
+            rules={"no_unlock": None}
+        ),
+        code="EVE"
+    )
+
+label rpgMod_menu:
+    python:
+        import store.evhand as evhand
+
+        dj_prev_items = (
+            ("In Progress", "progress"),
+            ("Abandoned", "abandon"),
+            ("Done", "done")
+        )
+        dj_current_category = None
+        dj_main_items = None
+
+        dj_picked_event = False
+
+    while not dj_picked_event:
+        if dj_current_category is not None:
+            python:
+                dj_events = Event.filterEvents(
+                    mas_all_ev_db_map["DJ_STR"],
+                    unlocked=True,
+                    aff=mas_curr_affection,
+                    flag_ban=EV_FLAG_HFM
+                )
+
+                if dj_current_category == "progress":
+                    for key in dj_events.keys():
+                        if key in persistent._dj_rpg_abandoned or key in persistent._dj_rpg_done:
+                            del dj_events[key]
+                elif dj_current_category == "abandon":
+                    for key in dj_events.keys():
+                        if key not in persistent._dj_rpg_abandoned:
+                            del dj_events[key]
+                elif dj_current_category == "done":
+                    for key in dj_events.keys():
+                        if key not in persistent._dj_rpg_done:
+                            del dj_events[key]
+                dj_main_items = list(map(lambda e: (e.prompt, e.eventlabel), dj_events.values()))
+        else:
+            $ dj_main_items = None
+
+        call screen dj_twopane_scrollable_menu(dj_prev_items, dj_main_items, evhand.LEFT_AREA, evhand.LEFT_XALIGN, evhand.RIGHT_AREA, evhand.RIGHT_XALIGN, 1 if dj_current_category is not None else 0) nopredict
+        if _return in dict(dj_prev_items).values():
+            $ dj_current_category = filter(lambda e: e[1] == _return, dj_prev_items)[0]
+        elif _return == -1:
+            $ dj_current_category = None
+        else:
+            $ dj_picked_event = True
+            if _return is not False:
+                $ mas_setEventPause(None)
+                $ pushEvent(_return, skipeval=True)
+
+    return
